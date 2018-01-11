@@ -3,3 +3,4 @@ Weather Report for Orem, Utah
 Date		Max (F)		Min (F)
 7/26		87		64
 7/27		89		62
+7/28		84		63
