@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody RB;
 	public float jumpSpeed;
 	public float sideSpeed;
-	public float fallSpeed;
+	public float fallSpeed = 2.5f;
+
 	void Start () {
 		RB = GetComponent<Rigidbody>();
 	}
@@ -23,10 +24,9 @@ public class PlayerController : MonoBehaviour {
 				RB.velocity = Vector3.up * jumpSpeed;
 			}
 		}
-		if(Input.GetButtonUp("Vertical")) {
-			if (Input.GetAxisRaw("Vertical") > 0) {
-				RB.velocity = Vector3.down * fallSpeed;
-			}
+		//if falling
+		if(RB.velocity.y < 0) {
+			RB.velocity += Vector3.up * Physics.gravity.y * (fallSpeed - 1);
 		}
 	}
 
