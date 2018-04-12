@@ -7,6 +7,7 @@ public class Playerscore : MonoBehaviour {
 
 	public Player player;
 	public Text score;
+	public Text WinText;
 
 	void Start () {
 		player.Score = 0;
@@ -14,9 +15,14 @@ public class Playerscore : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		Destroy(other.gameObject);
-		player.Score += 100;
-		score.text = "Score: " + player.Score;
+		if(other.tag == "coin") {
+			Destroy(other.gameObject);
+			player.Score += 100;
+			score.text = "Score: " + player.Score;
+		}
+		if(player.Score == 5000) {
+			WinText.text = "You Win!!!!";
+		}
 	}
 
 }

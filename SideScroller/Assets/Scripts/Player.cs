@@ -5,5 +5,5 @@ using UnityEngine;
 public class Player : ScriptableObject {
 
 	public int Score;
-	
+
 }
