@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - coin
+  - gem
+  - blueDoor
+  - blue
+  - redDoor
+  - yellowDoor
+  - red
+  - yellow
   layers:
   - Default
   - TransparentFX
