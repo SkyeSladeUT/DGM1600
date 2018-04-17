@@ -9,6 +9,7 @@ public class Collecting : MonoBehaviour {
 	public Text scoreText;
 	public Text WinText;
 	public int winScore;
+	public Animator animator;
 
 	void Start () {
 		player.Score = 0;
@@ -25,26 +26,13 @@ public class Collecting : MonoBehaviour {
 				Destroy(other.gameObject);
 				player.Score += 500;
 				break;
-			case "blue":
-				Destroy(other.gameObject);
-				player.numBlueKey++;
-				break;
-			case "red":
-				Destroy(other.gameObject);
-				player.numRedKey++;
-				break;
-			case "yellow":
-				Destroy(other.gameObject);
-				player.numYellowKey++;
-				break;
-			case "Untagged":
-				break;
 			default:
 				break;
 		}
 		scoreText.text = "Score: " + player.Score;
 		if(player.Score == winScore) {
 			WinText.text = "You Win!!!!";
+			animator.SetTrigger("ExitGame");
 		}
 	}
 

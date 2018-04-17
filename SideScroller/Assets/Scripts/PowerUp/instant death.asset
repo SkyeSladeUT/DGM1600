@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d145e3b1f01adba41a684481ce8dc0d3, type: 3}
   m_Name: instant death
   m_EditorClassIdentifier: 
-  MovePatternTransfer: {fileID: 11400000, guid: 3609deac81e56064cb1939e84e32dc2f,
+  MovePatternTransfer: {fileID: 11400000, guid: 83da3edbb515c3647bec36e197fef64a,
     type: 2}
   PowerLevel: 1
   ObjectDestroy: 0

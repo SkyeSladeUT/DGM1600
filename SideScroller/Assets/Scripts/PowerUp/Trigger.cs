@@ -7,6 +7,7 @@ public class Trigger : MonoBehaviour {
 
 	public PowerUp PowerUpTransfer;
 	public Image HealthBar;
+	public Animator animator;
 	
 	//public Color FullHealth;
 	//public Color MidHealth;
@@ -27,6 +28,9 @@ public class Trigger : MonoBehaviour {
 			else if (HealthBar.fillAmount > 0.0) {
 				HealthBar.color = LowHealth;
 			}*/
+		}
+		if(HealthBar.fillAmount <= 0) {
+			//do work
 		}
 		gameObject.SetActive(!PowerUpTransfer.ObjectDestroy);
 	}
