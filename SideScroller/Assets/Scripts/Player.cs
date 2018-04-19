@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : ScriptableObject {
 
 	public int Score;
-	public int numBlueKey = 0;
-	public int numRedKey = 0;
-	public int numYellowKey = 0;
+	public MovePattern MovePattern;
+	
 }

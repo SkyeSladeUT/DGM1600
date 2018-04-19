@@ -5,18 +5,34 @@ using UnityEngine;
 public class MoveCharacter : MonoBehaviour {
 
     private CharacterController controller;
-    public MovePattern MovePattern;
+    public Player Player;
     public float StartSpeed = 6.0F;
     public float StartJumpSpeed = 8.0F;
+    public Camera PlayerCam;
+    public Camera FullCam;
 
     private void Start () {
         controller = GetComponent<CharacterController> ();
-        MovePattern.speed = StartSpeed;
-        MovePattern.jumpSpeed = StartJumpSpeed;
+        Player.MovePattern.speed = StartSpeed;
+        Player.MovePattern.jumpSpeed = StartJumpSpeed;
+        PlayerCam.enabled = true;
+        FullCam.enabled = false;
     }
 
     void Update () {
-        MovePattern.Move (controller, transform);
+        Player.MovePattern.Move (controller, transform);
+        SetCamera();
+    }
+
+    void SetCamera() {
+        if(Input.GetButtonDown("Camera")) {
+            PlayerCam.enabled = false;
+            FullCam.enabled = true;
+        }
+        if(Input.GetButtonUp("Camera")) {
+            PlayerCam.enabled = true;
+            FullCam.enabled = false;
+        }
     }
 
 
