@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d1f6e40aa86a2e742b17d70b604cc6a4
-timeCreated: 1523567995
+guid: 50e118b610a69fd4fa1d4736c7f1e21a
+timeCreated: 1524099957
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCone34
+    4300000: pCone5
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -61,7 +61,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
