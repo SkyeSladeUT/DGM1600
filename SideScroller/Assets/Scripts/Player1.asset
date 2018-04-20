@@ -11,7 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822fe064af72ffb40a8bc1fa55ec3694, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  Score: 0
-  numBlueKey: 1
-  numRedKey: 0
-  numYellowKey: 0
+  Score: 100
+  MovePattern: {fileID: 11400000, guid: 3609deac81e56064cb1939e84e32dc2f, type: 2}
